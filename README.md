@@ -24,6 +24,75 @@ This repository contains Terraform projects used to provision and manage AWS res
 - Git
 - GitHub
 
+
+## Projects
+
+### Amazon S3
+- Created an S3 bucket using Terraform.
+- Managed resources locally with LocalStack.
+
+### Amazon EC2
+- Provisioned an EC2 instance using Terraform.
+- Practiced Infrastructure as Code principles.
+
+### AWS Lambda
+- Deployed a Python Lambda function using Terraform.
+- Packaged and managed Lambda resources.
+
+### Amazon DynamoDB
+- Created a DynamoDB table.
+- Practiced creating NoSQL resources with Terraform.
+
+## Prerequisites
+
+Before running these projects, install:
+
+- Terraform
+- Docker Desktop
+- LocalStack
+- AWS CLI
+- Git
+
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone git@github.com:naomiopara/TERRAFORM-LOCALSTACK.git
+```
+
+Navigate to any project:
+
+```bash
+cd s3
+```
+
+Initialize Terraform:
+
+```bash
+terraform init
+```
+
+Review the execution plan:
+
+```bash
+terraform plan
+```
+
+Create the infrastructure:
+
+```bash
+terraform apply
+```
+
+Destroy the infrastructure when finished:
+
+```bash
+terraform destroy
+```
+
+
 ## Project Structure
 
 ```

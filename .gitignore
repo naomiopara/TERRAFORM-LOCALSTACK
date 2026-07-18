@@ -4,6 +4,9 @@
 *.tfstate.*
 crash.log
 
+# Lambda deployment package
+lambda/lambda_function.zip
+
 # Variable files
 *.tfvars
 *.tfvars.json
