@@ -26,7 +26,7 @@ resource "aws_iam_role_policy_attachment" "lambda_logs" {
 # ---------------------------
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/src"       # folder containing my function code
+  source_dir  = "${path.module}/src" # folder containing my function code
   output_path = "${path.module}/lambda_function.zip"
 }
 
@@ -36,13 +36,13 @@ data "archive_file" "lambda_zip" {
 resource "aws_lambda_function" "this" {
   function_name    = "Naomi-localstack-lambda"
   role             = aws_iam_role.lambda_exec.arn
-  handler          = "lambda_function.lambda_handler"    
-  runtime          = "python3.12"          
+  handler          = "lambda_function.lambda_handler"
+  runtime          = "python3.12"
   filename         = data.archive_file.lambda_zip.output_path
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
 
-  timeout   = 45
-  memory_size =  256
+  timeout     = 45
+  memory_size = 256
 
   environment {
     variables = {
@@ -50,7 +50,7 @@ resource "aws_lambda_function" "this" {
       PROJECT     = "Localstack"
       OWNER       = "Naomi"
       REGION      = "us-east-1"
-      STAGE = "local"
+      STAGE       = "local"
     }
   }
 }

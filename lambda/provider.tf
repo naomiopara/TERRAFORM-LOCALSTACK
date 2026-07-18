@@ -8,9 +8,9 @@ terraform {
     }
 
     archive = {
-    source  = "hashicorp/archive"
-    version = "~> 2.4"
-  }
+      source  = "hashicorp/archive"
+      version = "~> 2.4"
+    }
 
   }
 }
@@ -24,15 +24,15 @@ provider "aws" {
   skip_credentials_validation = true
   skip_metadata_api_check     = true
   skip_requesting_account_id  = true
-  
 
-  endpoints  {
-    lambda         = "http://lambda.localhost.localstack.cloud:4566"
-    iam            = "http://localhost:4566"
-    logs           = "http://localhost:4566"
-    sts            = "http://localhost:4566" 
+
+  endpoints {
+    lambda = "http://lambda.localhost.localstack.cloud:4566"
+    iam    = "http://localhost:4566"
+    logs   = "http://localhost:4566"
+    sts    = "http://localhost:4566"
   }
- 
-  
-  
+
+
+
 }

@@ -3,10 +3,10 @@ resource "aws_s3_bucket" "naomi-bucket" {
 }
 
 
-resource  "aws_s3_bucket_versioning" "naomi-demo" {
+resource "aws_s3_bucket_versioning" "naomi-demo" {
   bucket = aws_s3_bucket.naomi-bucket.id
 
   versioning_configuration {
-     status = "Enabled"
+    status = "Enabled"
   }
 }

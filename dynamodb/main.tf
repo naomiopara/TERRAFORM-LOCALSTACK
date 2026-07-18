@@ -14,6 +14,6 @@ resource "aws_dynamodb_table" "students" {
     Environment = "local"
     ManagedBy   = "Terraform"
     Owner       = "Naomi"
-    
+
   }
 }
